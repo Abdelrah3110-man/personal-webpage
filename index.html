@@ -7,14 +7,17 @@
     <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet"></head>
     <link rel="stylesheet" href="css/bootstrap.min.css">
     <link rel="stylesheet" href="css/all.min.css">
-    <link rel="stylesheet" href="css/style.minfied.css">
+    <!-- <link rel="stylesheet" href="css/style.css"> -->
+    <link id="theme-style" rel="stylesheet" href="css/style.minfied.css" />
+    <!-- <link rel="stylesheet" href="css/style.dark.css"> -->
+    <!-- <link rel="stylesheet" href="css/style.minfied.css"> -->
    <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
-<body>
+<body class="dark-mode">
   <nav class="navbar navbar-expand-lg ">
   <div class="container">
-    <a class="navbar-brand text-uppercase fs-1 text-dark" href="#">Kemet</a>
+    <a class="navbar-brand text-uppercase fs-1" href="#">Kemet</a>
     <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
       <i class="fa-solid fa-bars"></i>
     </button>
@@ -35,6 +38,9 @@
         <li class="nav-item mx-2">
           <a class="nav-link" href="#Contact">Contact</a>
         </li>
+        <button id="darkModeToggle" class="btn btn-outline-dark">
+          <i class="fa-solid fa-moon"></i> Dark Mode
+        </button>
       </ul>
     </div>
   </div>
@@ -79,7 +85,7 @@
     <div class="row d-flex flex-row justify-contetn-center my-5">
       <div class="text col-xxl-12 col-xl-12 col-lg-12 col-md-12 col-sm-12 my-auto mx-auto">
         <h1 class="text-center display-3 fw-bold" data-aos="fade-up">Services</h1>
-        <p class="fs-3 text-black-50 text-center" data-aos="fade-up">From idea to screen — I craft websites that stand out</p>
+        <p class="fs-3 text-center c-g" data-aos="fade-up">From idea to screen — I craft websites that stand out</p>
       </div>
       <div class="image-slider-container col-12 col-md-12 col-sm-12 my-5" data-aos="fade-down">
           <button class="slider-btn left d-none d-md-block d-lg-block" onclick="slideLeft()">
@@ -125,24 +131,24 @@
   <div class="row d-flex flex-row justify-contetn-center mb-5 gap-4 pb-5">
       <div class="text col-xxl-12 col-xl-12 col-lg-12 col-md-12 col-sm-12 my-5">
         <h1 class="display-1 text-center px-1 fw-bold mt-5" data-aos="fade-up">Skills</h1>
-        <p class="fs-3 text-black-50 text-center" data-aos="fade-up">Clean code. Modern design. Smooth experience</p>
+        <p class="fs-3 text-center c-g" data-aos="fade-up">Clean code. Modern design. Smooth experience</p>
       </div>
 
 <div class="photos col-12 my-5 mx-1 row align-items-center justify-content-center gap-3">
         <div class="photo col-5 col-md-2  d-flex align-items-center justify-content-center" data-aos="fade-right">
-        <img src="imgs/html.jpg" class="img-fluid m-auto ">
+        <img src="imgs/html.png" class="img-fluid m-auto ">
       </div>
       <div class="photo col-5 col-md-2  d-flex align-items-center justify-content-center" data-aos="fade-right">
-        <img src="imgs/css.jpg" class="img-fluid ">
+        <img src="imgs/css.png" class="img-fluid ">
       </div>
       <div class="photo col-5 col-md-2 d-flex align-items-center justify-content-center"data-aos="fade-up">
         <img src="imgs/js.webp" class="img-fluid">
       </div>
       <div class="photo col-5 col-md-2  d-flex align-items-center justify-content-center" data-aos="fade-left">
-        <img src="imgs/bootstrap.webp" class="img-fluid ">
+        <img src="imgs/boot.png" class="img-fluid ">
       </div>
       <div class="photo col-5 col-md-2  d-flex align-items-center justify-content-center" data-aos="fade-left">
-        <img src="imgs/c++.jpg" class="img-fluid ">
+        <img src="imgs/c++.png" class="img-fluid ">
       </div>
 </div>
   </div>
@@ -153,7 +159,7 @@
     <div class="row d-flex flex-row justify-content-center flex-wrap">
       <div class="text col-xxl-12 col-xl-12 col-lg-12 col-md-12 col-sm-12 my-5">
       <h1 class="col-12 display-1 text-center px-1 fw-bold mt-5 " data-aos="fade-up">Contact With Me </h1>
-        <p class="fs-3 text-black-50 text-center" data-aos="fade-up">Let’s turn your vision into a live website</p>
+        <p class="fs-3 c-g text-center" data-aos="fade-up">Let’s turn your vision into a live website</p>
       </div>
       <div class="brand col-lg-3 col-md-6 col-sm-12 my-5 align-items-center justify-content-center d-flex flex-column" data-aos="fade-right">
         <a href="https://www.facebook.com/share/1F6bjtV33T/">
@@ -199,6 +205,42 @@
   AOS.init({
     duration: 1000, // مدة الحركة
     once: false      // تتحرك مرة واحدة بس
+  });
+</script>
+<script>
+  const toggleButton = document.getElementById("darkModeToggle");
+  const themeStyle = document.getElementById("theme-style");
+  const body = document.body;
+
+  // ✅ عند تحميل الصفحة شوف الوضع المحفوظ
+  window.addEventListener("DOMContentLoaded", () => {
+    const savedTheme = localStorage.getItem("theme");
+    if (savedTheme === "light") {
+      themeStyle.setAttribute("href", "css/style.minfied.css");
+      body.classList.remove("dark-mode");
+      toggleButton.innerHTML = '<i class="fa-solid fa-sun"></i> Light Mode';
+    } else {
+      themeStyle.setAttribute("href", "css/style.minfied.dark.css");
+      body.classList.add("dark-mode");
+      toggleButton.innerHTML = '<i class="fa-solid fa-moon"></i> Dark Mode';
+    }
+  });
+
+  // ✅ عند الضغط على الزر بدّل وخزّن
+  toggleButton.addEventListener("click", () => {
+    const isDark = themeStyle.getAttribute("href") === "css/style.dark.css";
+    if (isDark) {
+      themeStyle.setAttribute("href", "css/style.css");
+      body.classList.remove("dark-mode");
+      toggleButton.innerHTML = '<i class="fa-solid fa-sun"></i> Dark Mode';
+      localStorage.setItem("theme", "light");
+      
+    } else {
+      themeStyle.setAttribute("href", "css/style.dark.css");
+      body.classList.add("dark-mode");
+      toggleButton.innerHTML = '<i class="fa-solid fa-moon"></i> Light Mode';
+      localStorage.setItem("theme", "dark");
+    }
   });
 </script>
 <script src="js/bootstrap.bundle.min.js"></script>
