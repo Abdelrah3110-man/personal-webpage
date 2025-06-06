@@ -1,12 +1,11 @@
-:root{
-    --main:#fff6e9;
-    --green:#0d9276;
-    --red:#ff3150;
-    --yellow:#fac670;
-    --sec:#eff7fa;
-    --gray:#45474b;
+:root {
+  --main: #1e1e1e;        /* خلفية رئيسية غامقة */
+  --green: #03dac6;       /* لون مميز في الدارك مود */
+  --red: #cf6679;         /* لون أحمر يناسب الدارك مود */
+  --yellow: #ffb74d;      /* لون أصفر دافيء */
+  --sec: #2c2c2c;         /* لون ثانوي غامق */
+  --gray: #b0b0b0;        /* رمادي فاتح للكتابة */
 }
-
 .fs-80{
     @media (min-width:1192px) {
         font-size: 80px;
@@ -83,13 +82,13 @@ body.dark-mode h6
 } */
 
 /* ألوان للأزرار واللينكات في الدارك مود */
-body.dark-mode a.nav-link {
+/* body.dark-mode a.nav-link {
   color: #bb86fc;
 }
 
 body.dark-mode a.nav-link:hover {
   color: #ffffff;
-}
+} */
 
 html{
     scroll-behavior: smooth;
@@ -125,7 +124,7 @@ html{
     color: black;
 }
 .navbar a{
-    color: black;
+    color: white;
 }
 .navbar .navbar-nav .nav-link.active,
 .navbar .navbar-nav .nav-link:focus,
@@ -161,10 +160,10 @@ color: var(--green);
     
 }
 .landing .c2{
-      position: relative;
-  background: var(--main);
-  height: 20vh;
-  bottom: -70px;
+    position: relative;
+    background: var(--main);
+    height: 20vh;
+    bottom: -70px;
 }
 .wave {
   position: absolute;
@@ -490,3 +489,132 @@ a:hover .bn-l {
     background-color: var(--gray);
 }
 /* e-footer */
+
+/* الخلفية الأساسية */
+body.dark-mode {
+  background-color: var(--main);
+  color: var(--gray);
+}
+
+/* الخلفية للنّاف بار */
+body.dark-mode nav.navbar {
+  background-color: var(--sec);
+}
+
+/* الألوان العامة للنصوص */
+body.dark-mode .text,
+body.dark-mode p,
+body.dark-mode h1,
+body.dark-mode h2,
+body.dark-mode h3,
+body.dark-mode h4,
+body.dark-mode h5,
+body.dark-mode h6 {
+  color: var(--gray);
+}
+
+/* الروابط */
+body.dark-mode a.nav-link {
+  color: var(--green);
+}
+
+body.dark-mode a.nav-link:hover {
+  color: white;
+}
+
+/* أزرار */
+body.dark-mode .main-btn {
+  background-color: var(--green);
+  color: black;
+}
+body.dark-mode .main-btn:hover {
+  background-color: var(--yellow);
+}
+.btn-outline-dark {
+    color: #fff;
+    background-color: #212529;
+    border-color: #212529;
+}
+
+/* الخطوط */
+.c-g {
+  color: white;
+}
+.c-f {
+  color: var(--green);
+}
+
+/* تأثير الكتابة */
+.typing-container {
+  border-right: 2px solid var(--gray);
+}
+
+/* الناف بار */
+.navbar {
+  background-color: var(--main);
+}
+.navbar .navbar-nav .nav-link {
+  color: var(--gray);
+}
+.navbar .navbar-nav .nav-link.active,
+.navbar .navbar-nav .nav-link:focus,
+.navbar .navbar-nav .nav-link:hover {
+  color: var(--green);
+}
+.search {
+  border-left: 1px solid var(--green);
+}
+.search svg {
+  color: var(--green);
+}
+.navbar .navbar-toggler-icon,
+.navbar .navbar-toggler {
+  color: var(--gray);
+  border-color: var(--gray);
+}
+
+/* الأقسام */
+.landing,
+.services,
+.contact {
+  background-color: var(--main);
+}
+.about,
+.skills {
+  background-color: var(--sec);
+}
+.landing .row h1,
+.about .row h1,
+.services .row h1,
+.skills .row h1,
+.contact .row h1 {
+  color: var(--green);
+}
+
+/* الصور والدوائر */
+.skills .row .photos .photo {
+  border: 4px solid var(--green);
+}
+
+/* أيقونات السوشيال */
+.facebook,
+.instagram,
+.github,
+.linkedin,
+.brand a {
+  color: var(--gray);
+}
+.facebook:hover {
+  color: #1877f2;
+}
+.instagram:hover {
+  color: #f77737;
+}
+.github:hover {
+  color: #ffffff;
+}
+.linkedin:hover {
+  color: #0077b5;
+}
+
+ 
