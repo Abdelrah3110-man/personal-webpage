@@ -233,7 +233,6 @@ color: var(--green);
     -moz-border-radius: 15px;
     -ms-border-radius: 15px;
     -o-border-radius: 15px;
-    height: 570px;
 }
 /* end about */
 /* start services */
@@ -268,16 +267,15 @@ color: var(--green);
 .image-slider img {
   flex: 0 0 auto;
   scroll-snap-align: start;
-  width: 100%;
-  height: 640px;
+
   border-radius: 10px;
 }
 @media (max-width:767px) {
-    .image-slider img {
+    /* .image-slider img {
 
          width: 900px;
          height: 300px;
-    }
+    } */
 }
 @media (min-width:767px) {
     .image-slider img {
@@ -380,7 +378,7 @@ color: var(--green);
     -moz-transition: 0.3s;
     -ms-transition: 0.3s;
     -o-transition: 0.3s;
-    font-size: 15rem;
+    font-size: 10rem;
 }
 .facebook:hover{
     transform: scale(1.2);
@@ -398,7 +396,7 @@ color: var(--green);
     -moz-transition: 0.3s;
     -ms-transition: 0.3s;
     -o-transition: 0.3s;
-    font-size: 15rem;
+    font-size: 10rem;
 }
 .instagram:hover{
     transform: scale(1.2);
@@ -416,7 +414,7 @@ color: var(--green);
     -moz-transition: 0.3s;
     -ms-transition: 0.3s;
     -o-transition: 0.3s;
-    font-size: 15rem;
+    font-size: 10rem;
 }
 .github:hover{
     transform: scale(1.2);
@@ -433,7 +431,7 @@ color: var(--green);
     -moz-transition: 0.3s;
     -ms-transition: 0.3s;
     -o-transition: 0.3s;
-    font-size: 15rem;
+    font-size: 10rem;
 }
 .linkedin:hover{
     transform: scale(1.2);
