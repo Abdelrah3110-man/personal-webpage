@@ -7,7 +7,7 @@
     <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet"></head>
     <link rel="stylesheet" href="css/bootstrap.min.css">
     <link rel="stylesheet" href="css/all.min.css">
-    <link rel="stylesheet" href="css/style.minfied.css">
+    <link rel="stylesheet" href="css/style.css">
     <link id="theme-style" rel="stylesheet" href="css/style.minfied.css" />
    <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -43,13 +43,14 @@
     </div>
   </div>
 </nav>
+
 <div class="landing d-flex justify-content-center align-items-center flex-wrap">
   <div class="container col-12">
 
     <div class="row d-flex flex-row justify-contetn-center">
       <div class="text col-xxl-6 col-xl-6 col-lg-6 col-md-6 col-sm-12 my-auto mx-auto">
         <h1 class="display-5 text-lg-start text-md-start text-center py-4 px-1" data-aos="fade-right">Hello, I'm Abdelrahman Mahmoud a Front-End Web Developer. </h1>
-        <p class="fs-4 text-center text-lg-start text-md-start c-g" data-aos="fade-right">I specialize in building fast, responsive landing pages and personal CV websites. I help ambitious individuals turn their ideas into elegant and impactful online experiences.</p>
+        <p class="fs-4 text-center text-lg-start text-md-start c-g" data-aos="fade-right">Creating modern, responsive, and high-performance web experiences that turn ideas into reality. Passionate about building clean designs using React, Bootstrap, and the latest web tools.</p>
       </div>
       <div class="photo col-xxl-6 col-xl-6 col-lg-6 col-md-6 col-sm-12 d-flex align-items-center justify-content-center">
         <img src="imgs/landing.png" class="img-fluid persone" data-aos="fade-left">
@@ -67,14 +68,14 @@
   <div class="row d-flex flex-row justify-contetn-center gap-2 mb-5 pb-5">
     <h1 class="display-1 text-center py-4 px-1 fw-bold my-5" data-aos="fade-up">About Me</h1>
     <div class="text col-xxl-6 col-xl-6 col-lg-6 col-md-6 col-sm-12 my-auto mx-auto">
-      <p class="fs-4 text-center text-lg-start text-md-start my-5 c-g" data-aos="fade-right">I'm Abdelrahman, a passionate front-end developer who specializes in building responsive landing pages and interactive CV websites using HTML, CSS, Bootstrap, and Tailwind CSS..</p>
-      <p class="fs-4 text-center text-lg-start text-md-start my-5 c-g" data-aos="fade-right">I'm currently studying at the Faculty of Computer Science and Information. Over time, I’ve taken steady steps in my web development journey, driven by a strong passion for transforming creative designs into real, functional websites.</p>
-      <p class="fs-4 text-center text-lg-start text-md-start my-5 c-g" data-aos="fade-right">I’ve completed several professional and mobile-friendly projects, all available on my GitHub account. I treat every project as if it’s my first big opportunity, always aiming to deliver smooth and engaging user experiences.</p>
-      <p class="fs-4 text-center text-lg-start text-md-start my-5 c-g" data-aos="fade-right">I’m also the founder of Kemet Web Services, where I bring ideas to life through clean and modern web development.</p>
+      <p class="fs-4 text-center text-lg-start text-md-start my-5 c-g" data-aos="fade-right">Hi, I’m Abdelrahman — a front-end developer who loves turning creative ideas into clean, responsive, and user-friendly websites.</p>
+      <p class="fs-4 text-center text-lg-start text-md-start my-5 c-g" data-aos="fade-right">I’m currently studying Computer Science, and over the past months I’ve been steadily improving my front-end skills through practical projects and continuous learning.</p>
+      <p class="fs-4 text-center text-lg-start text-md-start my-5 c-g" data-aos="fade-right">I work mainly with HTML, CSS, and Bootstrap, focusing on building modern layouts that look great on all devices. I also have a growing experience with JavaScript and React, which I use to make my websites more interactive and dynamic.</p>
+      <p class="fs-4 text-center text-lg-start text-md-start my-5 c-g" data-aos="fade-right">I’m deeply passionate about web development and always eager to learn new technologies, challenge myself with new projects, and keep growing as a developer.</p>
     </div>
-      <div class="photo col-xxl-4 col-xl-4 col-lg-4 col-md-4 col-sm-12 my-5 d-flex align-items-center justify-content-center">
+      <!-- <div class="photo col-xxl-4 col-xl-4 col-lg-4 col-md-4 col-sm-12 my-5 d-flex align-items-center justify-content-center">
         <img src="imgs/kemet-1.png" class="img-fluid " data-aos="fade-left">
-      </div>
+      </div> -->
   </div>
 </div>
 </div>
@@ -85,11 +86,11 @@
         <h1 class="text-center display-3 fw-bold" data-aos="fade-up">Services</h1>
         <p class="fs-3 text-center c-g" data-aos="fade-up">From idea to screen — I craft websites that stand out</p>
       </div>
-      <div class="image-slider-container col-12 col-md-12 col-sm-12 my-5" data-aos="fade-down">
-          <button class="slider-btn left d-none d-md-block d-lg-block" onclick="slideLeft()">
+      <div class="image-slider-container col-12 col-md-12 col-sm-12 my-5 d-flex justify-content-center align-items-center" data-aos="fade-down">
+          <button class="slider-btn left d-none d-md-block d-lg-block col-1" onclick="slideLeft()">
             <i class="fa-solid fa-chevron-left"></i>
           </button>
-          <div class="image-slider" id="slider">
+          <div class="image-slider col-10" id="slider">
             <img src="imgs/a1.png" alt="Image 1" class="img-fluid">
             <img src="imgs/p1.png" alt="Image 2" class="img-fluid">
             <img src="imgs/p3.png" alt="Image 3" class="img-fluid">
@@ -105,21 +106,58 @@
             <img src="imgs/b2.png" alt="Image 6" class="img-fluid">
             <img src="imgs/b1.png" alt="Image 6" class="img-fluid">
           </div>
-          <button class="slider-btn right d-none d-md-block d-lg-block" onclick="slideRight()">
+          <button class="slider-btn right d-none d-md-block d-lg-block col-1" onclick="slideRight()">
             <i class="fa-solid fa-chevron-right"></i>
           </button>
         </div>
         <script>
-          const slider = document.getElementById('slider');
-          const slideAmount = 320; // عرض الصورة + margin
 
-          function slideLeft() {
-            slider.scrollBy({ left: -slideAmount, behavior: 'smooth' });
-          }
+const slider = document.getElementById('slider');
+const slideAmount = 320; // عرض الصورة + margin
 
-          function slideRight() {
-            slider.scrollBy({ left: slideAmount, behavior: 'smooth' });
-          }
+function slideLeft() {
+  // لو رجعنا لأول الصورة، نرجع للنهاية
+  if (slider.scrollLeft <= 0) {
+    slider.scrollLeft = slider.scrollWidth; 
+  } else {
+    slider.scrollBy({ left: -slideAmount, behavior: 'smooth' });
+  }
+}
+
+function slideRight() {
+  // لو وصلنا للنهاية، نرجع للبداية
+  if (slider.scrollLeft + slider.clientWidth >= slider.scrollWidth - 10) {
+    slider.scrollLeft = 0;
+  } else {
+    slider.scrollBy({ left: slideAmount, behavior: 'smooth' });
+  }
+}
+
+// ✅ التحريك التلقائي
+let autoSlide = setInterval(() => {
+  slideRight();
+}, 3000); // كل 3 ثواني
+
+// ✅ إعادة العداد بعد التفاعل اليدوي
+function resetAutoSlide() {
+  clearInterval(autoSlide);
+  autoSlide = setInterval(() => {
+    slideRight();
+  }, 3000);
+}
+
+// ✅ الأحداث
+document.getElementById('left-btn').addEventListener('click', () => {
+  slideLeft();
+  resetAutoSlide();
+});
+
+document.getElementById('right-btn').addEventListener('click', () => {
+  slideRight();
+  resetAutoSlide();
+});
+
+
         </script>
     </div>
   </div>
@@ -148,6 +186,12 @@
       <div class="photo col-5 col-md-2  d-flex align-items-center justify-content-center" data-aos="fade-left">
         <img src="imgs/c++.png" class="img-fluid ">
       </div>
+      <div class="photo col-5 col-md-2  d-flex align-items-center justify-content-center" data-aos="fade-left">
+        <img src="imgs/pngwing.com.png" class="img-fluid ">
+      </div>
+      <div class="photo col-5 col-md-2  d-flex align-items-center justify-content-center" data-aos="fade-left">
+        <img src="imgs/java.png" class="img-fluid ">
+      </div>
 </div>
   </div>
 </div>
@@ -166,7 +210,7 @@
         </a>
       </div>
       <div class="brand col-6 col-lg-3 col-md-6 col-sm-12 my-5 align-items-center justify-content-center d-flex flex-column" data-aos="fade-right">
-        <a href="https://www.instagram.com/kemet.div?igsh=MWx4bHljbTZxYm0ybA== ">
+        <a href="https://www.instagram.com/abdelrah__.man/">
           <i class="fa-brands fa-instagram fa-3x instagram col-12"></i>
           <div class="fs-2 text-center my-3 bn-i bn">instagram</div>
         </a>
