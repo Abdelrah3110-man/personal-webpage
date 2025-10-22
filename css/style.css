@@ -160,6 +160,15 @@ html {
 .navbar .navbar-toggler[aria-expanded="true"] {
   border-color: var(--gray);
 }
+.scroller {
+  position: fixed;
+  left: 0;
+  top: 0;
+  height: 5px;
+  width: 0px;
+  background-color: var(--green);
+  z-index: 99999;
+}
 /* end navbar */
 /* start landing */
 .landing {
@@ -173,6 +182,30 @@ html {
   height: 20vh;
   bottom: -70px;
 }
+.name {
+  border-right: 2px solid black;
+  overflow: hidden;
+  white-space: nowrap;
+  animation: control-width 3s steps(20) 2s both, blink 2s infinite;
+  -webkit-animation: control-width 3s steps(20) 2s both, blink 2s infinite;
+}
+@keyframes control-width {
+  from {
+    width: 0;
+  }
+  to {
+    width: 250px;
+  }
+}
+@keyframes blink {
+  from {
+    border-right-color: black;
+  }
+  to {
+    border-right-color: transparent;
+  }
+}
+
 .wave {
   position: absolute;
   height: 70px;
